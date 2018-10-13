@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- RWD -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>GDP基本資料填寫</title>
+     
+        <link rel="stylesheet" type="text/css" href="css/signup2.css"/>
+     
+    </head>
+
+
+    <body>
+        <div id="login_frame">
+        	<h2>基本資料填寫</h2>
+         
+            <p id="image_logo"><img src="images/gdp.png" width="200px"></p>
+         
+            <form method="post" action="js/login.js">
+         
+                <p><label class="label_input">身分證字號</label><input type="text" id="userIDNumber" class="text_field"/></p>
+                <p><label class="label_input">中文姓名</label><input type="text" id="userName" class="text_field"/></p>
+                <p><label class="label_input">英文姓名(同護照)</label><input type="text" id="userEngName" class="text_field"/></p>
+                <p><label class="label_input">性別</label><input type="text" id="userSex" class="text_field"/></p>
+                <p><label class="label_input">婚姻</label><input type="text" id="userMarriage" class="text_field"/></p>
+                <p><label class="label_input">生日(西元年/月/日)</label><input type="text" id="userBirthday" class="text_field"/></p>
+                <p><label class="label_input">通訊地址</label><input type="text" id="userCommuneAddr" class="text_field"/></p>
+                <p><label class="label_input">手機號碼</label><input type="text" id="userPhoneNum" class="text_field"/></p>
+                <p><label class="label_input">e-mail</label><input type="text" id="userEmail" class="text_field"/></p>
+                <p><label class="label_input">教育程度</label><input type="text" id="userEducation" class="text_field"/></p>
+                <p><label class="label_input">職業</label><input type="text" id="userOccupation" class="text_field"/></p>
+                <p><label class="label_input">年收入(新台幣)</label><input type="text" id="userAnnualIncome" class="text_field"/></p>
+         
+                <div id="login_control">
+                    
+                    <input type ="button" id="btn_submit" onclick="javascript:location.href='signup2.html'" value="確認送出"></input>
+                   
+                </div>
+            </form>
+        </div>
+     
+    </body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GDP登入頁面</title>
+ 
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+ 
+<body>
+<div id="login_frame">
+ 
+    <p id="image_logo"><img src="images/gdp.png" width="200px"></p>
+ 
+    <form method="post" action="js/login.js">
+ 
+        <p><label class="label_input">身分證字號</label><input type="text" id="userIDNumber" class="text_field"/></p>
+        <p><label class="label_input">用戶密碼</label><input type="text" id="userPassword" class="text_field"/></p>
+ 
+        <div id="login_control">
+            <input type="button" id="btn_login" value="登入" onclick="login();"/>
+            <input type ="button" id="btn_signup" onclick="javascript:location.href='signup.html'" value="註冊"></input>
+            <a id="forget_pwd" href="html/forget_pwd.html">忘記密碼?</a>
+        </div>
+    </form>
+</div>
+ 
+</body>
+</html>

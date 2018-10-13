@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GDP.World Transaction</title>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection" />
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css"> 
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand waves-effect waves-dark" href="index.html"><i class="large material-icons">track_changes</i> <strong>target</strong></a> -->
+				
+		<div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right"> 
+				  <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>Michael</b> <i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </nav>
+		<!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#"><i class="fa fa-user fa-fw"></i> 個人數位資產</a>
+            </li>
+            <li><a href="#"><i class="fa fa-gear fa-fw"></i> 設定</a>
+            </li> 
+            <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> 登出</a>
+            </li>
+            </ul>
+
+
+	   <!--/. NAV TOP  -->
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a href="index.html" class="waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> 首頁/個人數位資產</a>
+                    </li>
+                    
+                    <li>
+                        <a href="chart.html" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i> 虛擬錢包</a>
+                    </li>
+                    
+                    <li>
+                        <a class="active-menu waves-effect waves-dark"><i class="fa fa-table"></i>買幣競價</a>
+                    </li>
+                    <li>
+                        <a href="form.html" class="waves-effect waves-dark"><i class="fa fa-edit"></i> 賣幣掛單 </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+
+		  <div class="header"> 
+                        <h1 class="page-header">
+                            買幣競價
+                        </h1>
+						<ol class="breadcrumb">
+					  <li><a href="#">Home</a></li>
+					  <li><a href="#">Tables</a></li>
+					  <li class="active">Data</li>
+					</ol> 
+									
+		</div>
+		
+            <div id="page-inner"> 
+               
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="card">
+                        <div class="card-action">
+                              <form action="#">
+                                <p>
+                                  <input type="checkbox" id="test1" name="txCurrencyCho"  />
+                                  <label for="test1">dRMB->dHKD</label>
+                                </p>
+
+                                <p>
+                                  <input type="checkbox" id="test2" name="txCurrencyCho" />
+                                  <label for="test2">dHKD->dRMB</label>
+                                </p>
+                              </form>
+
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="table-responsive">
+
+
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            
+                                            <th>賣方</th>
+                                            <th>換匯幣別</th>
+                                            <th>數量</th>
+                                            <th>匯率</th>
+                                            <th></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td name="makerEmail">michael@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">95555</td>
+                                            <td name="txRate" class="center">4</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td makerEmail>michael@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">200</td>
+                                            <td name="txRate" class="center">5</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td name="makerEmail">michael@gdp.world</td>
+                                            <td name="txCurrency">dHKD->dRMB</td>
+                                            <td name="txAmount">60</td>
+                                            <td name="txRate" class="center">5.5</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td name="makerEmail">michael@gdp.world</td>
+                                            <td name="txCurrency">dHKD->dRMB</td>
+                                            <td name="txAmount">66666</td>
+                                            <td name="txRate" class="center">6</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td name="makerEmail">michael@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">455436</td>
+                                            <td name="txRate" class="center">7</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td name="makerEmail">michael@gdp.world</td>
+                                            <td name="txCurrency">dHKD->dRMB</td>
+                                            <td name="txAmount">87654654654</td>
+                                            <td name="txRate" class="center">6</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">21354621546554</td>
+                                            <td name="txRate" class="center">1.7</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dHKD->dRMB</td>
+                                            <td name="txAmount">900</td>
+                                            <td name="txRate" class="center">1.8</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">70</td>
+                                            <td name="txRate" class="center">1.8</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">9</td>
+                                            <td name="txRate" class="center">1.9</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">5</td>
+                                            <td name="txRate" class="center">1.8</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">54</td>
+                                            <td name="txRate" class="center">1.8</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">64</td>
+                                            <td name="txRate" class="center">1.7</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">6</td>
+                                            <td name="txRate" class="center">1.7</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dRMB->dHKD</td>
+                                            <td name="txAmount">2</td>
+                                            <td name="txRate" class="center">1.8</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dHKD->dRMB</td>
+                                            <td name="txAmount">1</td>
+                                            <td name="txRate" class="center">1</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dHKD->dRMB</td>
+                                            <td name="txAmount">554</td>
+                                            <td name="txRate" class="center">1.1</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dHKD->dRMB</td>
+                                            <td name="txAmount">879 </td>
+                                            <td name="txRate" class="center">1.2</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td name="makerEmail">ameow@gdp.world</td>
+                                            <td name="txCurrency">dHKD->dRMB</td>
+                                            <td name="txAmount">66</td>
+                                            <td name="txRate" class="center">1.3</td>
+                                            <td class="card-content center">
+                                                <a class="waves-effect waves-light btn">購買</a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!--End Advanced Tables -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                      <!--    Striped Rows Table  -->
+                    <div class="card">
+                        <div class="card-action">
+                            <h3>購買紀錄</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>賣方</th>
+                                            <th>換匯幣別</th>
+                                            <th>數量</th>
+                                            <th>匯率</th>
+                                    
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>dHKD->dRMB</td>
+                                            <td>666</td>
+                                            <th>1.14</th>
+                                         
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>dHKD->dRMB</td>
+                                            <td>299</td>
+                                            <td>1.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>dHKD->dHKD</td>
+                                            <td>100</td>
+                                            <td>1000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  End  Striped Rows Table  -->
+                    
+                </div>
+                
+            </div>
+                <!-- /. ROW  -->
+         
+               <footer></footer>
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+ 
+
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+	
+	<!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	
+	<script src="assets/materialize/js/materialize.min.js"></script>
+	
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+	
+	
+	<script src="assets/js/easypiechart.js"></script>
+	<script src="assets/js/easypiechart-data.js"></script>
+	
+	 <script src="assets/js/Lightweight-Chart/jquery.chart.js"></script>
+	 <!-- DATA TABLE SCRIPTS -->
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script> 
+ 
+
+</body>
+
+</html>
